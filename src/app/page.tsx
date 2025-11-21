@@ -1,13 +1,7 @@
 "use client";
 
-import { Suspense } from "react";
+import { NavigateToResource } from "@refinedev/nextjs-router";
 
-import { WelcomePage } from "@refinedev/core";
-
-export default function IndexPage() {
-  return (
-    <Suspense>
-      <WelcomePage />
-    </Suspense>
-  );
+export default function Home() {
+  return <NavigateToResource resource="properties" />;
 }
