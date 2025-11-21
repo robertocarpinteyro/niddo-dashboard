@@ -5,15 +5,15 @@ import { Form, Input, Select, InputNumber, Switch, Row, Col } from "antd";
 import { useEffect } from "react";
 
 export default function PropertyEdit() {
-  const { formProps, saveButtonProps, queryResult } = useForm({
+  const { formProps, saveButtonProps, query } = useForm({
     action: "edit",
     resource: "properties",
   });
 
   // Convertir arrays a texto cuando se carga el formulario
   useEffect(() => {
-    if (queryResult?.data?.data) {
-      const record = queryResult.data.data;
+    if (query?.data?.data) {
+      const record = query.data.data;
 
       // Convertir images array a texto
       if (record.images && Array.isArray(record.images)) {
@@ -30,7 +30,7 @@ export default function PropertyEdit() {
         formProps.form?.setFieldValue('floor_plans', record.floor_plans.join('\n'));
       }
     }
-  }, [queryResult?.data?.data]);
+  }, [query?.data?.data, formProps.form]);
 
   // Procesar datos antes de enviar
   const customFormProps = {
