@@ -18,7 +18,7 @@
     "@refinedev/devtools": "^2.0.1",
     "@refinedev/nextjs-router": "^7.0.0",
     "@refinedev/kbar": "^2.0.0",
-    "next": "^15.2.4",
+    "next": "15.2.8",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "@refinedev/supabase": "^6.0.0",
